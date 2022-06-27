@@ -14,7 +14,7 @@ const fetchUsers=async(user)=>{
   const data=await api_call.json();
   return {data} //isko object bna rkha tha
 };
-const showData=()=>{ // chutiya lovish
+const showData=()=>{ 
   fetchUsers(inputValue.value).then((res)=>{
     console.log(res);
     githubProfile.setAttribute('src',res.data.avatar_url);
@@ -22,6 +22,8 @@ const showData=()=>{ // chutiya lovish
     unContainer.innerHTML=`Username:<span class="main__profile-key">${res.data.login}</span>`;
     reposContainer.innerHTML=`Repos:<span class="main__profile-key">${res.data.public_repos}</span>`;
     urlContainer.innerHTML=`URL:<span class="main__profile-key">${res.data.url}</span>`;
+    urlContainer.innerHTML=`URL:<span class="main__profile-key">${res.html.url}</span>`;
+    
   })
 }
 searchButton.addEventListener("click",()=>{
