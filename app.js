@@ -22,7 +22,7 @@ const showData=()=>{
     unContainer.innerHTML=`Username:<span class="main__profile-key">${res.data.login}</span>`;
     reposContainer.innerHTML=`Repos:<span class="main__profile-key">${res.data.public_repos}</span>`;
     urlContainer.innerHTML=`URL:<span class="main__profile-key">${res.data.url}</span>`;
-    urlContainer.innerHTML=`URL:<span class="main__profile-key">${res.html.url}</span>`;
+    urlContainer.innerHTML=`URL:<span class="main__profile-key">${res.data.html_url}</span>`;
     
   })
 }
